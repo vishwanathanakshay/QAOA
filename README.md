@@ -7,7 +7,7 @@ numpy==1.16.2
 networkx==2.3
 ```
 ## QAOA on MAX-CUT
-The current implimentation contains an example to run MAC-CUT on random graph instances. After a successfull compilation the following example can be run: 
+The current implimentation contains an example to run MAX-CUT on random graph instances. After a successfull compilation the following example can be run: 
 ```python
 #TEST CODE: Runs 1p-QAOA on MAX-CUT Hamiltonian. Instance generated from a random graph with 6 nodes and 10 edges. 
 nodes = 6
