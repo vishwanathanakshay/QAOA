@@ -1,5 +1,5 @@
 # QAOA
-This repo contains a QAOA Template that takes in a diagonal Hamiltonian (in the sigma_z basis) and runs the algorithm to output the QAOA cost as well as the success probability or the Ground state overlap. 
+This repo contains a QAOA Template that takes in a diagonal Hamiltonian (in sigma_z basis) and runs the algorithm to output the QAOA cost as well as the success probability or the ground state overlap. The repo also includes a faster implementation (QAOA_fast) and some generators for Graph hamiltonians. QAOA_fast only requires basic python packages and can easilly reproduce the ideal-noiseless Google data publshed in [Nature Physics](https://doi.org/10.1038/s41567-020-01105-y).   
 ## Package and version Information 
 ```python
 scipy==1.2.1
