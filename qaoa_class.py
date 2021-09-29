@@ -257,14 +257,16 @@ class QAOA:
 
             
             res = minimize(self.expectation,opt_angles,method='L-BFGS-B', jac=None, bounds=bds(int(len(opt_angles)/2)), options={'maxfun': 15000})    
-            self.opt_angles = res.x
+            opt_angles = res.x
+        self.opt_angles = opt_angles    
+       
         
 
             
         t_end = time.time()
         self.exe_time = float(t_end - t_start)
         self.opt_iter = float(res.nfev)
-        self.q_energy = self.expectation(opt_angles)
+        self.q_energy = self.expectation(self.opt_angles)
         self.q_error = self.q_energy - self.min
-        self.f_state = self.qaoa_ansatz(opt_angles)
+        self.f_state = self.qaoa_ansatz(self.opt_angles)
         self.olap = self.overlap(self.f_state)[0]
