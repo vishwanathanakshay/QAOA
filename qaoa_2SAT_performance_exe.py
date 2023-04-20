@@ -46,7 +46,7 @@ def depth_scaling(instance_num,H):
         seed_result = []
         
         for s in range(1,seeds +1):
-            Q.run_heruistic_LW()
+            Q.run_heuristic_LW()
             temp = [Q.q_energy,Q.min,Q.q_error,Q.olap,Q.deg,p_c,s,instance_num,Q.exe_time]
             file_dump(temp,f_name1)
             seed_result.append(temp)
@@ -84,7 +84,7 @@ def performance(instance_num,H,p):
     seed_result = []
         
     for s in range(1,seeds + 1):
-        Q.run_heruistic_LW()
+        Q.run_heuristic_LW()
         temp = [Q.q_energy,Q.min,Q.q_error,Q.olap,Q.deg,p,s,instance_num,Q.exe_time]
         file_dump(temp,f_name1)
         seed_result.append(temp)
