@@ -196,7 +196,7 @@ class QAOA:
         
      #__________________________________________________________________________________________________________
         
-    def run_heruistic_LW(self):
+    def run_heuristic_LW(self):
         
         initial_guess = lambda x: ([random.uniform(0,2*np.pi) for _ in range(x) ] +                                    [random.uniform(0,np.pi) for _ in range(x)])
         bds = lambda x: [(0.1,2*np.pi)]*x + [(0.1,1*np.pi)]*x
